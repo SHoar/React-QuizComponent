@@ -12,12 +12,14 @@ class Quiz extends Component {
 
   render() {
     let quizData = require("./quiz_data.json");
+    let { quiz_questions } = quizData;
+    let { quiz_position } = this.state;
 
     return (
       <div>
         <QuizQuestion
-          quiz_position={this.state.quiz_position}
-          quizData={quizData}
+          quiz_question={quiz_questions[quiz_position - 1]}
+          quiz_position={quiz_position - 1}
         />
       </div>
     );

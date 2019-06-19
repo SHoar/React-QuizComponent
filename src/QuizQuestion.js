@@ -6,21 +6,17 @@ class QuizQuestion extends Component {
   }
 
   render() {
-    const { quizData, quiz_position } = this.props;
-    const { quiz_questions } = quizData;
+    console.log("quiz_question props", this.props);
+    const { quiz_questions } = this.props;
     return (
       <div>
         <main>
           <section>
-            <p>{quiz_questions[quiz_position - 1].instruction_text}</p>
+            <p>{this.props.quiz_question.instruction_text}</p>
           </section>
           <section className="buttons">
             <ul>
-              {quiz_questions.map((quiz_question) => {
-                return (
-                  <li>{quiz_question.answer_options[quiz_position - 1]}</li>
-                );
-              })}
+              <li>{this.props.quiz_question.answer_options}</li>
             </ul>
           </section>
         </main>
