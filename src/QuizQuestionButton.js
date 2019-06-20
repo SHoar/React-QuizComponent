@@ -1,16 +1,12 @@
 import React, { Component } from "react";
 
 class QuizQuestionButton extends Component {
-  constructor(props) {
-    super(props);
-  }
+  handleClick = (event) => {
+    alert("You clicked me!");
+  };
 
   render() {
-    return (
-      <li>
-        <button>{this.props.button_text}</button>
-      </li>
-    );
+    return <button onClick={this.handleClick}>{this.props.button_text}</button>;
   }
 }
 
