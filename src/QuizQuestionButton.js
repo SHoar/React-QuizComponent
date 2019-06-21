@@ -7,8 +7,8 @@ class QuizQuestionButton extends Component {
     this.handleClick = this.handleClick.bind(this);
   }
 
-  handleClick(event) {
-    alert("You clicked me!");
+  handleClick(buttonText) {
+    this.props.clickHandler(buttonText);
   }
 
   render() {
