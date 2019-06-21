@@ -3,7 +3,6 @@ import React, { Component } from "react";
 class QuizQuestionButton extends Component {
   constructor(props) {
     super(props);
-    this.state = {};
     this.handleClick = this.handleClick.bind(this);
   }
 
@@ -13,7 +12,7 @@ class QuizQuestionButton extends Component {
 
   render() {
     return (
-      <button onClick={(e) => this.handleClick(e)}>
+      <button onClick={this.handleClick(this.props.button_text)}>
         {this.props.button_text}
       </button>
     );
